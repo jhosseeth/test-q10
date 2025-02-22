@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10 | Test</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body class="">
+    <header class="fixed w-64">
+        <img src="assets/logo.png" alt="">
+    </header>
+
+    <section class="hero relative h-screen flex items-center justify-center text-center">
+        <!-- Contenido -->
+        <div class="relative z-10 px-6">
+            <h1 class="text-5xl font-bold mb-4">Explorando el mundo de la Computación Gráfica</h1>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                Desde el modelado 3D hasta los efectos visuales en tiempo real, 
+                la computación gráfica es la intersección perfecta entre arte y tecnología.
+            </p>
+            <a href="#explorar" class="mt-6 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg">
+                Explorar más
+            </a>
+        </div>
+    </section>
+
+    <section id="explorar" class="explore relative h-screen flex">
+        <h1 class="typing-effect absolute z-10 text-white">
+            La computación gráfica es el campo de la informática que se encarga de generar, manipular y visualizar imágenes digitalmente. Desde el modelado 3D hasta los efectos visuales en videojuegos y simulaciones, este campo combina matemáticas, programación y diseño para crear experiencias visuales impactantes.
+        </h1>
+
+        <!-- Modelo 3D -->
+        <model-viewer
+            id="static-model"
+            src="assets/robot.glb" 
+            alt="Modelo 3D interactivo"
+            auto-rotate
+            autoplay
+            camera-controls
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2">
+        </model-viewer>
+    </section>
+
+    <section class="py-16 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            
+            <!-- Imagen -->
+            <div class="w-full md:w-1/2 relative">
+                <img src="assets/item4.webp" alt="Visualización de Computación Gráfica" class="w-full">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <model-viewer
+                        id="animated-model"
+                        class="w-9/12 h-5/6"
+                        alt="A 3D model"
+                        src="assets/animated.glb"
+                        loading="eager"
+                        autoplay
+                        animation-loop="false"
+                        shadow-intensity="1.5"
+                        camera-controls
+                        camera-orbit="-80deg 80deg 110%"
+                        disable-zoom
+                        disable-pan
+                        oncontextmenu="return false;"
+                        touch-action="pan-y">
+                    </model-viewer>
+                </div>
+            </div>
+    
+            <!-- Texto -->
+            <div class="w-full md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4">¿Qué es la Computación Gráfica?</h2>
+                <p class="text-lg text-gray-300">
+                    La computación gráfica es el campo de la informática que se encarga de generar, manipular y visualizar imágenes digitalmente. 
+                    Desde el modelado 3D hasta los efectos visuales en videojuegos y simulaciones, este campo combina matemáticas, programación y diseño 
+                    para crear experiencias visuales impactantes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="flex gap-4 mt-4">
+        <button id="prev-btn" class="p-2 bg-gray-700 text-white rounded">Prev</button>
+        <div id="animation-buttons" class="flex gap-2"></div>
+        <button id="next-btn" class="p-2 bg-gray-700 text-white rounded">Next</button>
+    </div>
+
+    <!-- Video section -->
+    <section class="relative w-full h-screen overflow-hidden">
+        <!-- Video de fondo -->
+        <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay loop muted playsinline>
+            <source src="assets/video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    
+        <!-- Imagen encima del video -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <img id="overlay-image" class="w-[400px] opacity-80" src="assets/imagen.webp" alt="Imagen sobre video">
+        </div>
+    
+        <!-- Texto animado encima de la imagen -->
+        <div id="animated-text" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+            Computación Gráfica en Acción
+        </div>
+    </section>
+
+    
+    
+    <!-- Footer -->
+    <footer class="h-56 pt-32 text-center w-full bg-cover">
+        <img src="assets/logo_white.png" alt="Logo Programa Partner Q10" class="mx-auto h-12">
+        <p class="text-gray-400 mt-2">Crafted by Jhoss Naranjo© 2025</p>
+    </footer>
+    
+</body>
+</html>
