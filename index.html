@@ -6,45 +6,32 @@
     <title>Q10 | Test</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 
 <body class="">
-    <header class="fixed w-64">
-        <img src="assets/logo.png" alt="">
+    <header class="fixed w-64 z-10">
+        <img src="assets/logo_white.png" alt="logo" class="block md:hidden">
+        <img src="assets/logo.png" alt="logo" class="hidden md:block">
     </header>
 
     <section class="hero relative h-screen flex items-center justify-center text-center">
         <!-- Contenido -->
         <div class="relative z-10 px-6">
-            <h1 class="text-5xl font-bold mb-4">Explorando el mundo de la Computación Gráfica</h1>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            <h1 class="text-5xl font-bold mb-6 fade-in">Explorando el mundo de la Computación Gráfica</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-4 fade-in-delay">
                 Desde el modelado 3D hasta los efectos visuales en tiempo real, 
                 la computación gráfica es la intersección perfecta entre arte y tecnología.
             </p>
-            <a href="#explorar" class="mt-6 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg">
+            <a href="#explorar" class="mt-6 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg fade-in-delay-2">
                 Explorar más
             </a>
         </div>
-    </section>
-
-    <section id="explorar" class="explore relative h-screen flex">
-        <h1 class="typing-effect absolute z-10 text-white">
-            La computación gráfica es el campo de la informática que se encarga de generar, manipular y visualizar imágenes digitalmente. Desde el modelado 3D hasta los efectos visuales en videojuegos y simulaciones, este campo combina matemáticas, programación y diseño para crear experiencias visuales impactantes.
-        </h1>
-
-        <!-- Modelo 3D -->
-        <model-viewer
-            id="static-model"
-            src="assets/robot.glb" 
-            alt="Modelo 3D interactivo"
-            auto-rotate
-            autoplay
-            camera-controls
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2">
-        </model-viewer>
     </section>
 
     <section class="py-16 px-6">
