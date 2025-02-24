@@ -79,15 +79,3 @@ footer {
         border-radius: 10px;
     }
 }
-
-.typing-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 3s steps(40, end) forwards;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}

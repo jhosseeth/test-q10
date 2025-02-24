@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex = index;
         }
 
-        // Iniciar con la primera animación
+        // Iniciar con la animacion de caminar
         playAnimation(currentIndex);
     });
 });
